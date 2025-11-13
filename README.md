@@ -1,2 +1,1 @@
-# team-collaboration-demo
-"github bootcamp team work
+Hi! Im Patrick, and I worked on about page.
