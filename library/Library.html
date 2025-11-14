@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Borrowing System</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Library Borrowing System</h1>
+            <p class="subtitle">Manage your books with Supabase</p>
+        </header>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>➕ Add New Book</h2>
+                <div id="addBookAlert"></div>
+                <form id="addBookForm">
+                    <div class="form-group">
+                        <label for="bookTitle">Book Title</label>
+                        <input type="text" id="bookTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookAuthor">Author</label>
+                        <input type="text" id="bookAuthor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookISBN">ISBN</label>
+                        <input type="text" id="bookISBN" required>
+                    </div>
+                    <button type="submit" id="addBookBtn">Add Book to Library</button>
+                </form>
+            </div>
+
+            <div class="section">
+                <h2>👤 Borrow Book</h2>
+                <div id="borrowAlert"></div>
+                <form id="borrowForm">
+                    <div class="form-group">
+                        <label for="borrowerName">Borrower Name</label>
+                        <input type="text" id="borrowerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectBook">Select Book</label>
+                        <select id="selectBook" required>
+                            <option value="">-- Choose a book --</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="borrowBtn">Borrow Book</button>
+                </form>
+            </div>
+
+            <div class="section book-list">
+                <h2>📖 Available Books</h2>
+                <div class="books-grid" id="booksGrid">
+                    <div class="loading">Loading books...</div>
+                </div>
+            </div>
+
+            <div class="section borrowed-list">
+                <h2>📋 Borrowed Books</h2>
+                <div id="borrowedList">
+                    <div class="loading">Loading borrowed books...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
